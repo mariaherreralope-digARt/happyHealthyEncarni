@@ -1,6 +1,6 @@
 import React from "react";
-import CoachingImg from "../assets/CoachingImg.png";
-import CoachingImg2 from "../assets/CoachingImg2.png"; // second image
+import CoachingImg from "../assets/coachingImg.png";
+import CoachingImg2 from "../assets/coachingImg2.png"; // second image
 import { motion } from "framer-motion";
 
 const Coaching = () => {
