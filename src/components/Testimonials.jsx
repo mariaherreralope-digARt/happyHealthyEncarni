@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     id: 1,
-    name: " – Zay Nuba, guionista y directora de proyectos", 
+    name: " – Zay Nuba, guionista y directora de proyectos",
     // image: testimonial1,
     text: "Encarna es la persona que quiers tener cerca en cualquier proyecto en el que te embarques por su optimismo y fuerza.",
   },
@@ -35,28 +35,28 @@ const testimonials = [
 const TestimonialsSection = () => {
   return (
     <section id="testimonios" className="py-16 px-14  inset-0 z-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent max-w-7xl mx-auto ">
-      <motion.div 
-        
+      <motion.div
+
         className="text-center mb-12"
       >
-        <motion.h2 
-          
+        <motion.h2
+
           className="text-2xl text-primary md:text-3xl font-heading mb-0"
         >
           VoceS de TransformacióN
         </motion.h2>
-        <motion.p 
-         
+        <motion.p
+
           className="text-lg text-btt font-body mb-4 mt-4 italic"
         >
           A través de retiros, cursos y coaching uno a uno, <br />nuestra comunidad ha encontrado claridad, equilibrio y crecimiento duradero.
         </motion.p>
       </motion.div>
-{/* Swiper cards */}
-      <motion.div 
-        
+      {/* Swiper cards */}
+      <motion.div
+
         className="relative"
-        
+
       >
         <Swiper
           modules={[Navigation]}
@@ -77,31 +77,31 @@ const TestimonialsSection = () => {
             },
           }}
           className="testimonials-swiper md:mb-12"
-          
-        >
-          {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={testimonial.id} className='h-full md:py-12 py-4'>
-<motion.div 
 
-  whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
-  transition={{ type: "spring", stiffness: 300 }}
-  className="text-center bg-transparent border border-secondary p-4  shadow-md h-full flex flex-col"
->
-{/* 
+        >
+          {testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial.id} className='h-full md:py-12 py-4'>
+              <motion.div
+
+                whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="text-center bg-transparent border border-secondary p-4  shadow-md h-full flex flex-col"
+              >
+                {/* 
                 <motion.div 
                  
                   className="w-24 h-24 mx-auto mb-4"
                   
                 > */}
-                  {/* <motion.img
+                {/* <motion.img
                    
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-full h-full object-cover "
                   /> */}
                 {/* </motion.div> */}
-                <motion.div 
-                
+                <motion.div
+
                   className="flex justify-center mb-2"
                 >
                   {/* {[...Array(5)].map((_, starIndex) => (
@@ -114,13 +114,13 @@ const TestimonialsSection = () => {
                     </motion.span>
                   ))} */}
                 </motion.div>
-                <motion.h3 
-                
+                <motion.h3
+
                   className="font-semibold text-btt font-heading text-xl mb-3"
                 >
                   {testimonial.name}
                 </motion.h3>
-                <motion.p 
+                <motion.p
                   className="text-slate-100 font-body drop-shadow-sm"
                 > {testimonial.text}
                 </motion.p>
@@ -130,20 +130,20 @@ const TestimonialsSection = () => {
         </Swiper>
 
         {/* Custom Navigation Buttons */}
-        <motion.div 
-        
+        <motion.div
+
           className="flex justify-center gap-4 mt-8"
         >
-          <motion.button 
-         
+          <motion.button
+
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-lime-800 hover:text-white cursor-pointer transition-colors"
           >
             <BsChevronLeft className="w-6 h-6" />
           </motion.button>
-          <motion.button 
-          
+          <motion.button
+
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-lime-800 hover:text-white cursor-pointer transition-colors"
