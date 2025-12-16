@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaBlog, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import logo from '../assets/logo-footer.png';
 
 const footerLinks = {
@@ -41,7 +41,7 @@ const Footer = () => {
                 alt="Logo Bienestar"
                 className="h-12 rounded-lg relative z-10 hover:scale-[1.02] transition-transform duration-300 object-contain"
               />
-              <span className='text-xl font-heading font-bold text-btt'>happy&healthy</span>
+              <span className='text-xl font-heading font-bold text-btt'>@happy_healthy_tmv</span>
             </div>
 
             <p className='text-gray-600 mb-6 font-body md:w-3/4'>
@@ -49,14 +49,16 @@ const Footer = () => {
             </p>
 
             <div className='flex gap-4'>
-              <a href="#" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-200'>
-                <FaFacebookF className="size-5" />
+              <a href="https://wellnessentrenandomenteycorazon.blogspot.com/" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-200'>
+                <FaBlog className="size-5" />
               </a>
-              <a href="#" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-btt hover:text-white transition-all duration-200'>
+              <a href="
+
+https://www.instagram.com/happy_healthy_tmv?igsh=MTVyMXkwb2d6cDI4Zw%3D%3D&utm_source=qr" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-btt hover:text-white transition-all duration-200'>
                 <FaInstagram className="size-5" />
               </a>
-              <a href="#" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-secondary hover:text-white transition-all duration-200'>
-                <FaTiktok className="size-5" />
+              <a href="https://www.linkedin.com/in/encarni-cerrillo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-secondary hover:text-white transition-all duration-200'>
+                <FaLinkedin className="size-5" />
               </a>
             </div>
           </div>

@@ -123,6 +123,11 @@ const AboutMe = () => {
         </motion.div>
 
       </div>
+      <div className="flex flex-col  items-center justify-between ">
+        <h2 className=" mt-6 text-xl text-primary md:text-2xl font-heading mb-4">Logo y arbolito significado</h2>
+        <p className="max-w-3xl mx-auto text-sm md:text-md font-body italic text-center leading-relaxed text-btt">El árbol de la vida representa el crecimiento personal, las raíces , la conexión interior y la expansión. <br />
+El leoncito simboliza valentía y corage,  esa fuerza interna que todos tenemos, incluso cuando no la vemos.</p>
+      </div>
     </section>
   );
 };

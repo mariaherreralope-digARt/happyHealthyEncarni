@@ -41,7 +41,7 @@ const TestimonialsSection = () => {
       >
         <motion.h2
 
-          className="text-2xl text-primary md:text-3xl font-heading mb-0"
+          className="text-2xl text-primary md:text-3xl font-heading mb-0 uppercase"
         >
           VoceS de TransformacióN
         </motion.h2>
