@@ -21,7 +21,7 @@ const AboutMe = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
           >
-            Encarni Cerrillo
+            Encarni L. Cerrillo
           </motion.h2>
 
           <motion.h3
@@ -31,7 +31,7 @@ const AboutMe = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            PhD y Life Coach
+            PhD & Life Wellness Coach
           </motion.h3>
 
           <motion.p
@@ -41,10 +41,17 @@ const AboutMe = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Para mí, <strong>Happy & Healthy</strong> significa vivir en armonía con uno mismo y con los demás.  
-            No se trata solo de bienestar físico, sino de una felicidad auténtica que surge cuando cuidamos nuestras emociones, nuestra mente y nuestra alma.
+            <strong>Happy & Healthy</strong> significa vivir feliz y saludable , en armonía para alcanzar <strong>Tu Mejor Versión</strong>.
           </motion.p>
-
+          <motion.p
+            className="max-w-3xl mx-auto text-sm md:text-md font-body leading-relaxed text-gray-700 mb-6"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            Es un estado de bienestar integral  que surge  cuando mente, cuerpo y alma están en sincronía es bienestar holístico.
+          </motion.p>
           <motion.p
             className="max-w-3xl mx-auto text-sm md:text-md font-body leading-relaxed text-gray-700 mb-6"
             initial={{ opacity: 0, y: -20 }}
@@ -52,10 +59,20 @@ const AboutMe = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Soy <strong>Encarni L. Cerrillo, PhD</strong> y Life Coach especializada en Inteligencia Emocional, PNL, Mindfulness, y gestión del estrés y la ansiedad.  
-            Mi propósito con <strong>Happy & Healthy</strong> es acompañarte en un viaje de transformación personal, ayudándote a vivir con mayor equilibrio, plenitud y propósito.
-          </motion.p>
-
+                Soy tu coach , Doctora  en Educación. Licenciada en ciencias de la Actividad física y deporte.
+                
+   
+</motion.p>
+          <motion.p
+            className="max-w-3xl mx-auto text-sm md:text-md font-body leading-relaxed text-gray-700 mb-6"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+             
+    Especializada en Inteligencia Emocional, Mindfullness, PNL  e implementación de hábitos para la gestión del estrés y la ansiedad. 
+</motion.p>
           <motion.p
             className="max-w-3xl mx-auto text-sm md:text-md font-body leading-relaxed text-gray-700 mb-6"
             initial={{ opacity: 0, y: -20 }}
@@ -63,19 +80,30 @@ const AboutMe = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Creo firmemente que la verdadera salud y felicidad nacen de dentro: cuando mente, corazón y propósito están alineados.  
-            Por eso, mi enfoque se basa en <strong>Ikigai</strong>, ayudándote a descubrir tu razón de ser y a vivir una vida más consciente, plena y alineada con tu verdadero propósito.
+            Te acompaño en un viaje de transformación personal para vivir con propósito - encontrar tu  razón de ser - IKIGAI- y alcanzar tu propia felicidad.
           </motion.p>
 
           <motion.p
-            className="max-w-3xl mx-auto text-sm md:text-md font-body leading-relaxed text-gray-700"
+            className="max-w-3xl mx-auto text-sm md:text-md font-body leading-relaxed text-primary font-semibold"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            Mi misión es guiarte para que encuentres tu equilibrio interior, descubras tu fuerza interior, y crees la vida que mereces, combinando bienestar emocional, mental y espiritual en cada paso de tu camino.
+           Mi misión es acompañarte - guiarte desde el autoconocimiento y la   introspección, para descubrir  tu fortaleza interior y crear la vida que te mereces incrementando tu  bienestar físico, emocional , mental y espiritual.
+
           </motion.p>
+
+          <motion.p
+            className="max-w-3xl mx-auto text-sm md:text-md font-body italic text-center leading-relaxed text-btt"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            “Juntos es más fácil”
+          </motion.p>
+
         </motion.div>
 
         {/* RIGHT column: Image */}

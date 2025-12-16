@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 import CookieConsentBanner from './components/CookieConsentBanner'
 import Coaching from './components/Coaching'
+import Investigaciones from './components/Investigaciones.jsx'
 
 import { ModalProvider } from './components/ModalContext'
 import GlobalModal from './components/GlobalModal.jsx'
@@ -26,6 +27,7 @@ function App() {
           <Cursos />
           <ImageSlider />
           <Coaching />
+          <Investigaciones />
           <Testimonials />
           <Newsletter />
           <Footer />

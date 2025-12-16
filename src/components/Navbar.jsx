@@ -15,10 +15,14 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "#quiensoy", label: "Quien Soy" },
-    { href: "#cursos", label: "Cursos" },
-    { href: "#retiros", label: "Retiros" },
     { href: "#coaching", label: "Coaching" },
-    { href: "#testimonios", label: "Testimonios" },
+    { href: "#retiros", label: "Retiros y Experiencias" },
+
+    { href: "#cursos", label: "Cursos y Formaciones" },
+    // { href: "#libros", label: "Libros" },
+    { href: "#investigaciones", label: "Investigaciones" },
+
+    // { href: "#testimonios", label: "Testimonios" },
   ];
 
   const handleOpenContactForm = () => {
@@ -34,12 +38,12 @@ const Navbar = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="fixed top-0 font-body right-0 left-0 shadow-sm z-30"
       >
-        <div className="w-full backdrop-blur-lg bg-transparent mx-auto flex items-center justify-between px-4 sm:px-8 lg:px-10 h-20">
+        <div className="w-full backdrop-blur-lg bg-white/30 mx-auto flex items-center justify-between px-4 sm:px-8 lg:px-10 h-20">
           {/* Logo */}
           <a
             href="#inicio"
             onClick={() => setActiveLink("#inicio")}
-            className="flex items-center mt-4 focus:outline-none focus:ring-0"
+            className="flex items-center justify-center focus:outline-none focus:ring-0"
           >
             <motion.img
               initial={{ opacity: 0, x: -50 }}
@@ -47,7 +51,7 @@ const Navbar = () => {
               transition={{ duration: 2.8, delay: 0.5 }}
               src={logo}
               alt="Happy & Healthy"
-              className="h-40 relative z-10"
+              className="h-60 relative z-10 pt-12"
             />
           </a>
 
@@ -69,7 +73,7 @@ const Navbar = () => {
                 className={`text-sm uppercase font-body font-light relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-secondary after:transition-all ${
                   activeLink === link.href
                     ? "text-primary after:w-full"
-                    : "text-btt hover:text-secondary after:w-0 hover:after:w-full"
+                    : "text-light hover:text-secondary after:w-0 hover:after:w-full"
                 }`}
               >
                 {link.label}

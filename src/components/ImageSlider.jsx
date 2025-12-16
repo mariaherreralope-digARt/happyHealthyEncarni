@@ -15,51 +15,56 @@ import card5 from "../assets/card5.png";
 import card6 from "../assets/card6.png";
 import card7 from "../assets/card7.png";
 import card8 from "../assets/card8.png";
+import card9 from "../assets/card9.png";
 
 
 
 const slides = [
   {
     image: card1,
-    title: "Bienvenid@ a la Experiencia",
-    description: "Sumérgete en un retiro pensado para ti, donde cada detalle está diseñado para tu bienestar y crecimiento personal.",
+    title: "CONECTADO A TI",
+    description: "Un retiro donde el tiempo se convierte en tu aliado  para potenciar tu crecimiento personal y reconectar contigo mism@.",
   },
   {
     image: card2,
-    title: "Mindfulness en la Naturaleza",
-    description: "Descubre prácticas de atención plena que te ayudarán a calmar la mente y disfrutar del presente en un entorno único.",
+    title: "PODEROSA NATURALEZA",
+    description: "Descubre prácticas de atención plena que te ayudarán a comprender -  calmar tu mente disfrutando del presente consciente en entornos únicos",
   },
   {
     image: card3,
-    title: "Coaching Transformacional",
-    description: "Recibe acompañamiento profesional para aclarar tus metas, desbloquear tu potencial y reconectar con tu propósito.",
+    title: "FOCUS",
+    description: "Una experiencia con acompañamiento profesional para aclarar tus metas, desbloquear tu potencial y reconectar con tu propósito de vida.",
   },
   {
     image: card4,
-    title: "Bienestar Integral",
-    description: "Integra movimiento consciente, ejercicios de respiración y hábitos saludables que equilibran cuerpo y espíritu.",
+    title: "HOLISTIC WELLNESS",
+    description: " Equilibra tu cuerpo y tu mente a través del movimiento, la respiración consciente y los hábitos potenciadores para tu bienestar con baños de sol y mar.",
   },
     {
     image: card5,
-    title: "Energía Renovada",
-    description: "Libérate del estrés cotidiano y recarga tu vitalidad rodeado de la serenidad de Cabo de Gata.",
+    title: "IKIGAI MOMENTS",
+    description: "Viaja a Japón y vive una transformación que despertará tu ilusión y pasión por la vida.",
   },
       {
     image: card6,
-    title: "Conexión Profunda",
-    description: "Vive momentos de silencio, introspección y contacto con la naturaleza que fortalecen tu equilibrio interior.",
+    title: "INSIDE",
+    description: "Silencio, introspección, naturaleza y mindfulness para fortalecer tu equilibrio interior.",
   },
       {
     image: card7,
-    title: "Comunidad y Apoyo",
-    description: "Comparte la experiencia con personas afines, creando lazos significativos en un espacio seguro y enriquecedor.",
+    title: "FLOW EXPERIENCE",
+    description: "Vive una experiencia enriquecedora y desafiante que te invita a fluir, soltar y reconectar con tu esencia.",
   },
       {
     image: card8,
-    title: "Regresa Transformad@",
-    description: "Llévate contigo herramientas prácticas, paz interior y una nueva visión para aplicar en tu vida diaria.",
+    title: "MINDFUL EXPERIENCE",
+    description: "Descubre herramientas prácticas para transformar tu bienestar cultivando momentos de presencia y consciencia a través del mindfulness.",
   },
-
+{
+    image: card9,
+    title: "EXCLUSIVE EXPERIENCE",
+    description: "Personaliza tu experiencia y crea un viaje de bienestar a tu medida.",
+  },
 
 ];
 

@@ -26,21 +26,19 @@ const GlobalModal = () => {
               stiffness: 200,
               duration: 0.8,
             }}
-            className="bg-white dark:bg-secondary/50 shadow-xl w-full max-w-md p-6"
+            className="bg-white dark:bg-secondary/50 shadow-xl w-full max-w-md p-6 rounded-lg"
           >
+            {/* Header */}
             <div className="flex justify-between items-center mb-4">
               <h1 className="text-xl font-heading text-gray-600 dark:text-gray-100">
                 Contacta con Nosotros
               </h1>
-              <button
-                onClick={closeModal}
-                aria-label="Close contact form"
-              >
-                <FiX className="w-6 h-6 text-gray-00 dark:text-gray-100" />
+              <button onClick={closeModal} aria-label="Close contact form">
+                <FiX className="w-6 h-6 text-gray-600 dark:text-gray-100" />
               </button>
             </div>
 
-            {/* Input Forms */}
+            {/* Input Form */}
             <form
               action="https://formsubmit.co/mariaherreralope@gmail.com"
               method="POST"
@@ -54,6 +52,7 @@ const GlobalModal = () => {
                 value="Gracias por tu mensaje. Nos pondremos en contacto pronto."
               />
 
+              {/* Nombre */}
               <div>
                 <label
                   htmlFor="name"
@@ -64,10 +63,14 @@ const GlobalModal = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   placeholder="Tu Nombre"
                   className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-secondary focus:border-secondary bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                  required
                 />
               </div>
+
+              {/* Correo Electrónico */}
               <div>
                 <label
                   htmlFor="email"
@@ -78,10 +81,32 @@ const GlobalModal = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   placeholder="Tu Correo Electrónico"
                   className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-secondary focus:border-secondary bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                  required
                 />
               </div>
+
+              {/* Teléfono */}
+              <div>
+                <label
+                  htmlFor="telefono"
+                  className="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-1"
+                >
+                  Teléfono
+                </label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="Tu Número de Teléfono"
+                  className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-secondary focus:border-secondary bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                  pattern="[0-9+ ]*"
+                />
+              </div>
+
+              {/* Mensaje */}
               <div>
                 <label
                   htmlFor="message"
@@ -92,11 +117,17 @@ const GlobalModal = () => {
                 <textarea
                   rows={4}
                   id="message"
-                  placeholder="¿Cómo podemos ayudarte?"
+                  name="message"
+                  placeholder="Cuéntanos en qué servicio o programa te gustaría participar."
                   className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-secondary focus:border-secondary bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                 />
               </div>
-              <motion.button className="w-full px-4 py-2 text-white bg-gradient-to-r from-btt to-primary hover:from-primary hover:to-btt transition-all duration-300 font-body ">
+
+              {/* Submit */}
+              <motion.button
+                type="submit"
+                className="w-full px-4 py-2 text-white bg-gradient-to-r from-btt to-primary hover:from-primary hover:to-btt transition-all duration-300 font-body rounded-lg"
+              >
                 Enviar Mensaje
               </motion.button>
             </form>

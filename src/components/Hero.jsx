@@ -29,8 +29,8 @@ const Hero = () => {
             transition={{ duration: 1.2 }}
             className='text-4xl font-heading md:text-5xl lg:text-7xl font-bold text-light md:leading-relaxed'
           >
-            <span className="block">Empieza tu</span>
-            <span className="block">transformación</span>
+            <span className="block">HOLISTIC </span>
+            <span className="block">WELLNESS</span>
           </motion.h1>
 
           <motion.p
@@ -40,7 +40,8 @@ const Hero = () => {
             transition={{ duration: 1.2, delay: 0.2 }}
             className='text-slate-300 font-body pb-7'
           >
-            Descubre tu fuerza interior, encuentra claridad  <br /> y crea la vida que mereces.
+            La ruta consciente para tu  transformación. 
+  <br /> I n s i d e, ikigai and flow
           </motion.p>
 
           <motion.form
