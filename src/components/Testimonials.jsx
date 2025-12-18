@@ -1,160 +1,149 @@
+import { useState, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
+import { BsPauseFill, BsPlayFill, BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
-import { motion } from "framer-motion";
 
-// import testimonial1 from "../assets/testimonial1.jpg"
-// import testimonial2 from "../assets/testimonial2.jpg";
-// import testimonial3 from "../assets/testimonial3.png";
+import card1 from "../assets/testimonios1.jpeg";
+import card2 from "../assets/testimonios2.jpeg";
+import card3 from "../assets/testimonios3.jpeg";  
+import card4 from "../assets/testimonios4.jpeg";
+import card5 from "../assets/testimonios5.jpeg";
+import card6 from "../assets/testimonios6.jpeg";
 
 
-const testimonials = [
+
+
+const slides = [
   {
-    id: 1,
-    name: " – Zay Nuba, guionista y directora de proyectos",
-    // image: testimonial1,
-    text: "Encarna es la persona que quiers tener cerca en cualquier proyecto en el que te embarques por su optimismo y fuerza.",
+    image: card1,
+    // title: "CONECTADO A TI",
+    // description: "Un retiro donde el tiempo se convierte en tu aliado  para potenciar tu crecimiento personal y reconectar contigo mism@.",
   },
   {
-    id: 2,
-    name: "– Martín Tello Castro, general manager y senior executive",
-    // image: testimonial2,
-    text: "Comprometida, sensible, empática, capaz de ponerse en la piel de aquél a quien ayuda, receptiva y permeable a nuestros enfoques. En definitiva capaz de entender tu situación, por lo que propone soluciones a tu medida y las particulariza a tus necesidades concretas.",
+    image: card2,
+    // title: "PODEROSA NATURALEZA",
+    // description: "Descubre prácticas de atención plena que te ayudarán a comprender -  calmar tu mente disfrutando del presente consciente en entornos únicos",
   },
   {
-    id: 3,
-    name: " – Jose Manuel",
-    // image: testimonial3,
-    text: "Encarni, dos semanas después de haber acabado mi programa de coaching reafirmo que ha sido una de las mejores inversiones de mi vida. Me encuentro lleno de energía, vitalidad y en el trabajo mi rendimiento ha mejorado. Soy más feliz y así lo demuestro. Muchas gracias!!!",
+    image: card3,
+    // title: "FOCUS",
+    // description: "Una experiencia con acompañamiento profesional para aclarar tus metas, desbloquear tu potencial y reconectar con tu propósito de vida.",
   },
+  {
+    image: card4,
+    // title: "HOLISTIC WELLNESS",
+    // description: " Equilibra tu cuerpo y tu mente a través del movimiento, la respiración consciente y los hábitos potenciadores para tu bienestar con baños de sol y mar.",
+  },
+    {
+    image: card5,
+    // title: "IKIGAI MOMENTS",
+    // description: "Viaja a Japón y vive una transformación que despertará tu ilusión y pasión por la vida.",
+  },
+      {
+    image: card6,
+    // title: "INSIDE",
+    // description: "Silencio, introspección, naturaleza y mindfulness para fortalecer tu equilibrio interior.",
+  },
+
 
 ];
 
-const TestimonialsSection = () => {
+const ImageSlider = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const swiperRef = useRef(null);
+
+  const toggleAutoplay = () => {
+    if (!swiperRef.current) return;
+    if (isPaused) {
+      swiperRef.current.autoplay.start();
+    } else {
+      swiperRef.current.autoplay.stop();
+    }
+    setIsPaused(!isPaused);
+  };
+
   return (
-    <section id="testimonios" className="py-16 px-14  inset-0 z-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent max-w-7xl mx-auto ">
-      <motion.div
+    <section id="retiros" className="relative mx-24 py-12">
 
-        className="text-center mb-12"
-      >
-        <motion.h2
+      <div className="text-center mb-10 mt-0 pt-0 text-gray-700 drop-shadow-md">
+        <h1 className="text-2xl text-primary md:text-3xl font-heading mb-0">TESTIMONIOS</h1>
+        <p className="text-lg text-btt font-body mb-4 italic"> través de retiros, cursos y coaching uno a uno, <br />nuestra comunidad ha encontrado claridad, equilibrio y crecimiento duradero.</p>
+      </div>
 
-          className="text-2xl text-primary md:text-3xl font-heading mb-0 uppercase"
+      {/* Image Slider Container */}
+      <div className="relative h-[550px] flex items-center group">
+        {/* Navigation Buttons */}
+        <button
+          className="absolute -right-12 top-1/2 transform -translate-y-1/2 z-20 bg-primary hover:bg-white hover:border hover:border-primary hover:text-primary text-white rounded-full p-2 transition duration-300"
+          onClick={() => swiperRef.current?.slideNext()}
         >
-          VoceS de TransformacióN
-        </motion.h2>
-        <motion.p
-
-          className="text-lg text-btt font-body mb-4 mt-4 italic"
+          <BsChevronRight className="w-6 h-6" />
+        </button>
+        <button
+          className="absolute -left-12 top-1/2 transform -translate-y-1/2 z-20 bg-primary hover:bg-white hover:border hover:border-primary hover:text-primary text-white rounded-full p-2 transition duration-300"
+          onClick={() => swiperRef.current?.slidePrev()}
         >
-          A través de retiros, cursos y coaching uno a uno, <br />nuestra comunidad ha encontrado claridad, equilibrio y crecimiento duradero.
-        </motion.p>
-      </motion.div>
-      {/* Swiper cards */}
-      <motion.div
+          <BsChevronLeft className="w-6 h-6" />
+        </button>
 
-        className="relative"
-
-      >
+        {/* Swiper Carousel */}
         <Swiper
-          modules={[Navigation]}
-          spaceBetween={30}
-          navigation={{
-            nextEl: '.swiper-button-next-custom',
-            prevEl: '.swiper-button-prev-custom',
-          }}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          className="testimonials-swiper md:mb-12"
-
+          modules={[Navigation, Autoplay]}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          spaceBetween={0}
+          slidesPerView={1}
+          loop
+          speed={2000}
+          autoplay={{ delay: 6000, disableOnInteraction: false }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          className="absolute top-0 left-0 w-full h-full z-0"
         >
-          {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id} className='h-full md:py-12 py-4'>
-              <motion.div
-
-                whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="text-center bg-transparent border border-secondary p-4  shadow-md h-full flex flex-col"
-              >
-                {/* 
-                <motion.div 
-                 
-                  className="w-24 h-24 mx-auto mb-4"
-                  
-                > */}
-                {/* <motion.img
-                   
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-full h-full object-cover "
-                  /> */}
-                {/* </motion.div> */}
-                <motion.div
-
-                  className="flex justify-center mb-2"
-                >
-                  {/* {[...Array(5)].map((_, starIndex) => (
-                    <motion.span 
-                      key={starIndex} 
-                     
-                      className="text-yellow-600"
-                    >
-                      ★
-                    </motion.span>
-                  ))} */}
-                </motion.div>
-                <motion.h3
-
-                  className="font-semibold text-btt font-heading text-xl mb-3"
-                >
-                  {testimonial.name}
-                </motion.h3>
-                <motion.p
-                  className="text-slate-100 font-body drop-shadow-sm"
-                > {testimonial.text}
-                </motion.p>
-              </motion.div>
+          {slides.map((slide, idx) => (
+            <SwiperSlide key={idx}>
+              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Custom Navigation Buttons */}
-        <motion.div
-
-          className="flex justify-center gap-4 mt-8"
-        >
-          <motion.button
-
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-lime-800 hover:text-white cursor-pointer transition-colors"
-          >
-            <BsChevronLeft className="w-6 h-6" />
-          </motion.button>
-          <motion.button
-
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-lime-800 hover:text-white cursor-pointer transition-colors"
-          >
-            <BsChevronRight className="w-6 h-6" />
-          </motion.button>
-        </motion.div>
-
-      </motion.div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-slate-700/30 z-10 flex flex-col items-center justify-center text-center px-4">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="max-w-3xl"
+            >
+              {/* <h2 className="text-slate-300 font-heading text-2xl md:text-3xl font-bold mb-4">
+                {slides[activeIndex].title}
+              </h2>
+              <p className="text-white text-lg md:text-xl">
+                {slides[activeIndex].description}
+              </p> */}
+            </motion.div>
+          </AnimatePresence>
+          {/* Pause/Play Button - centered below text */}
+          <div className="mt-6 flex justify-center">
+            <button
+              onClick={toggleAutoplay}
+              className="bg-white/30 hover:bg-white/60 text-black rounded-full p-3 transition duration-300"
+              title={isPaused ? 'Reanudar presentación' : 'Pausar presentación'}
+            >
+              {isPaused ? <BsPlayFill className="w-6 h-6" /> : <BsPauseFill className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
 
-export default TestimonialsSection;
+export default ImageSlider;
+
