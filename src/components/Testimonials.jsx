@@ -2,54 +2,30 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import { BsPauseFill, BsPlayFill, BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import {
+  BsPauseFill,
+  BsPlayFill,
+  BsChevronLeft,
+  BsChevronRight,
+} from 'react-icons/bs';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 import card1 from "../assets/testimonios1.jpeg";
 import card2 from "../assets/testimonios2.jpeg";
-import card3 from "../assets/testimonios3.jpeg";  
+import card3 from "../assets/testimonios3.jpeg";
 import card4 from "../assets/testimonios4.jpeg";
 import card5 from "../assets/testimonios5.jpeg";
 import card6 from "../assets/testimonios6.jpeg";
 
-
-
-
 const slides = [
-  {
-    image: card1,
-    // title: "CONECTADO A TI",
-    // description: "Un retiro donde el tiempo se convierte en tu aliado  para potenciar tu crecimiento personal y reconectar contigo mism@.",
-  },
-  {
-    image: card2,
-    // title: "PODEROSA NATURALEZA",
-    // description: "Descubre prácticas de atención plena que te ayudarán a comprender -  calmar tu mente disfrutando del presente consciente en entornos únicos",
-  },
-  {
-    image: card3,
-    // title: "FOCUS",
-    // description: "Una experiencia con acompañamiento profesional para aclarar tus metas, desbloquear tu potencial y reconectar con tu propósito de vida.",
-  },
-  {
-    image: card4,
-    // title: "HOLISTIC WELLNESS",
-    // description: " Equilibra tu cuerpo y tu mente a través del movimiento, la respiración consciente y los hábitos potenciadores para tu bienestar con baños de sol y mar.",
-  },
-    {
-    image: card5,
-    // title: "IKIGAI MOMENTS",
-    // description: "Viaja a Japón y vive una transformación que despertará tu ilusión y pasión por la vida.",
-  },
-      {
-    image: card6,
-    // title: "INSIDE",
-    // description: "Silencio, introspección, naturaleza y mindfulness para fortalecer tu equilibrio interior.",
-  },
-
-
+  { image: card1 },
+  { image: card2 },
+  { image: card3 },
+  { image: card4 },
+  { image: card5 },
+  { image: card6 },
 ];
 
 const ImageSlider = () => {
@@ -59,39 +35,29 @@ const ImageSlider = () => {
 
   const toggleAutoplay = () => {
     if (!swiperRef.current) return;
-    if (isPaused) {
-      swiperRef.current.autoplay.start();
-    } else {
-      swiperRef.current.autoplay.stop();
-    }
+    isPaused
+      ? swiperRef.current.autoplay.start()
+      : swiperRef.current.autoplay.stop();
     setIsPaused(!isPaused);
   };
 
   return (
-    <section id="retiros" className="relative mx-24 py-12">
-
-      <div className="text-center mb-10 mt-0 pt-0 text-gray-700 drop-shadow-md">
-        <h1 className="text-2xl text-primary md:text-3xl font-heading mb-0">TESTIMONIOS</h1>
-        <p className="text-lg text-btt font-body mb-4 italic"> través de retiros, cursos y coaching uno a uno, <br />nuestra comunidad ha encontrado claridad, equilibrio y crecimiento duradero.</p>
+    <section id="retiros" className="relative mx-6 md:mx-24 py-12">
+      {/* Header */}
+      <div className="text-center mb-10 text-gray-700 drop-shadow-md">
+        <h1 className="text-2xl text-primary md:text-3xl font-heading">
+          TESTIMONIOS
+        </h1>
+        <p className="text-lg text-btt font-body italic">
+          A través de retiros, cursos y coaching uno a uno,
+          <br />
+          nuestra comunidad ha encontrado claridad, equilibrio y crecimiento duradero.
+        </p>
       </div>
 
-      {/* Image Slider Container */}
-      <div className="relative h-[550px] flex items-center group">
-        {/* Navigation Buttons */}
-        <button
-          className="absolute -right-12 top-1/2 transform -translate-y-1/2 z-20 bg-primary hover:bg-white hover:border hover:border-primary hover:text-primary text-white rounded-full p-2 transition duration-300"
-          onClick={() => swiperRef.current?.slideNext()}
-        >
-          <BsChevronRight className="w-6 h-6" />
-        </button>
-        <button
-          className="absolute -left-12 top-1/2 transform -translate-y-1/2 z-20 bg-primary hover:bg-white hover:border hover:border-primary hover:text-primary text-white rounded-full p-2 transition duration-300"
-          onClick={() => swiperRef.current?.slidePrev()}
-        >
-          <BsChevronLeft className="w-6 h-6" />
-        </button>
-
-        {/* Swiper Carousel */}
+      {/* Slider Wrapper */}
+      <div className="relative flex flex-col md:h-[550px] group">
+        {/* Swiper */}
         <Swiper
           modules={[Navigation, Autoplay]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -101,17 +67,21 @@ const ImageSlider = () => {
           speed={2000}
           autoplay={{ delay: 6000, disableOnInteraction: false }}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          className="absolute top-0 left-0 w-full h-full z-0"
+          className="relative md:absolute md:inset-0 w-full z-0"
         >
           {slides.map((slide, idx) => (
             <SwiperSlide key={idx}>
-              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+              <img
+                src={slide.image}
+                alt={`Testimonio ${idx + 1}`}
+                className="w-full h-auto md:h-full object-cover"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-slate-700/30 z-10 flex flex-col items-center justify-center text-center px-4">
+        <div className="relative md:absolute md:inset-0 bg-slate-700/30 z-10 flex flex-col items-center justify-center text-center px-4">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -120,25 +90,54 @@ const ImageSlider = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 1 }}
               className="max-w-3xl"
-            >
-              {/* <h2 className="text-slate-300 font-heading text-2xl md:text-3xl font-bold mb-4">
-                {slides[activeIndex].title}
-              </h2>
-              <p className="text-white text-lg md:text-xl">
-                {slides[activeIndex].description}
-              </p> */}
-            </motion.div>
+            />
           </AnimatePresence>
-          {/* Pause/Play Button - centered below text */}
-          <div className="mt-6 flex justify-center">
-            <button
-              onClick={toggleAutoplay}
-              className="bg-white/30 hover:bg-white/60 text-black rounded-full p-3 transition duration-300"
-              title={isPaused ? 'Reanudar presentación' : 'Pausar presentación'}
-            >
-              {isPaused ? <BsPlayFill className="w-6 h-6" /> : <BsPauseFill className="w-6 h-6" />}
-            </button>
-          </div>
+        </div>
+
+        {/* Controls (mobile below / md overlay) */}
+        <div className="relative md:absolute md:inset-0 z-20 flex flex-row items-center justify-between px-4 mt-4 md:mt-0 pointer-events-none">
+          {/* Left */}
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="
+              pointer-events-auto
+              bg-primary hover:bg-white hover:border hover:border-primary hover:text-primary
+              text-white rounded-full p-2 transition duration-300
+              md:absolute md:left-[-3rem] md:top-1/2 md:-translate-y-1/2
+            "
+          >
+            <BsChevronLeft className="w-6 h-6" />
+          </button>
+
+          {/* Play / Pause */}
+          <button
+            onClick={toggleAutoplay}
+            className="
+              pointer-events-auto
+              bg-white/30 hover:bg-white/60 text-black
+              rounded-full p-3 transition duration-300 my-4 md:my-0
+            "
+            title={isPaused ? 'Reanudar presentación' : 'Pausar presentación'}
+          >
+            {isPaused ? (
+              <BsPlayFill className="w-6 h-6" />
+            ) : (
+              <BsPauseFill className="w-6 h-6" />
+            )}
+          </button>
+
+          {/* Right */}
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className="
+              pointer-events-auto
+              bg-primary hover:bg-white hover:border hover:border-primary hover:text-primary
+              text-white rounded-full p-2 transition duration-300
+              md:absolute md:right-[-3rem] md:top-1/2 md:-translate-y-1/2
+            "
+          >
+            <BsChevronRight className="w-6 h-6" />
+          </button>
         </div>
       </div>
     </section>
@@ -146,4 +145,3 @@ const ImageSlider = () => {
 };
 
 export default ImageSlider;
-

@@ -92,7 +92,7 @@ const ImageSlider = () => {
       </div>
 
       {/* Image Slider Container */}
-      <div className="relative h-[350px] flex items-center group">
+      <div className="relative  h-[500px] w-90vw md:h-[350px] flex items-center group">
         {/* Navigation Buttons */}
         <button
           className="absolute -right-12 top-1/2 transform -translate-y-1/2 z-20 bg-primary hover:bg-white hover:border hover:border-primary hover:text-primary text-white rounded-full p-2 transition duration-300"
