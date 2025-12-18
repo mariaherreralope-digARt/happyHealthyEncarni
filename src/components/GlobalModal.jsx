@@ -40,7 +40,7 @@ const GlobalModal = () => {
 
             {/* Input Form */}
             <form
-              action="https://formsubmit.co/mariaherreralope@gmail.com"
+              action="https://formsubmit.co/happy.healthy.tmv@gmail.com"
               method="POST"
               className="space-y-4"
             >
