@@ -122,6 +122,26 @@ const GlobalModal = () => {
                   className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-secondary focus:border-secondary bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                 />
               </div>
+              <div className="mt-4 text-sm text-gray-700">
+  <label className="flex items-start gap-2">
+    <input
+      type="checkbox"
+      required
+      className="mt-1"
+    />
+    <span>
+      He leído y acepto la{" "}
+      <a
+        href="/politica-de-privacidad"
+        className="underline text-secondary hover:text-secondary/80"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Política de Privacidad
+      </a>
+    </span>
+  </label>
+</div>
 
               {/* Submit */}
               <motion.button
