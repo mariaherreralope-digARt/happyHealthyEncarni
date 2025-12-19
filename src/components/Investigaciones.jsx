@@ -25,17 +25,17 @@ const slideColumns = [
     { title: "Investigaciones", image: investigaciones3, description: "ORCID: Identificador digital que distingue de forma única a los investigadores y conecta su actividad académica y científica.", link: "https://orcid.org/0000-0002-5747-4480" },
   ],
   [
-    { title: "Reconocimientos", image: premios1, description: "Premio innovación educación." },
-    { title: "Reconocimientos", image: premios2, description: "Premio Microsoft." },
-    { title: "Reconocimientos", image: premios3, description: "ANECA  y ACAP son las  acreditaciones que evalúan el curriculum del profesorado universitario.  ANECA (Agencia Nacional de Evaluación de la Calidad y Acreditación)  como organismo estatal que evalúa el currículum del profesorado universitario y ACAP (Agencia de Calidad, Acreditación y Prospectiva de las Universidades de Madrid) es el organismo autonómico de la Comunidad de Madrid. Ambas evalúan los méritos del profesor." },
+    { title: "Reconocimientos", image: premios1, description: "Premio innovación educación.", link: null },
+    // { title: "Reconocimientos", image: premios2, description: "Premio Microsoft." },
+    { title: "Reconocimientos", image: premios3, description: "ANECA  y ACAP son las  acreditaciones que evalúan el curriculum del profesorado universitario.  ANECA (Agencia Nacional de Evaluación de la Calidad y Acreditación)  como organismo estatal que evalúa el currículum del profesorado universitario y ACAP (Agencia de Calidad, Acreditación y Prospectiva de las Universidades de Madrid) es el organismo autonómico de la Comunidad de Madrid. Ambas evalúan los méritos del profesor.", link: null },
 
 
   ],
   [
-    { title: "Libros", image: libros1, description: "LIBRO ABUSO PODER: Este libro visibiliza las múltiples caras del abuso de poder, no solo las obvias o extremas, sino también aquellas que aparecen en situaciones cotidianas: decisiones diarias, gestiones, comunicaciones, exclusiones, silencios, jerarquías informales, etc. Busca transformar la comprensión de estas dinámicas, salir del victimismo y ofrecer herramientas de regulación interna y externa frente a estos comportamientos." },
+    { title: "Libros", image: libros1, description: "LIBRO ABUSO PODER: Este libro visibiliza las múltiples caras del abuso de poder, no solo las obvias o extremas, sino también aquellas que aparecen en situaciones cotidianas: decisiones diarias, gestiones, comunicaciones, exclusiones, silencios, jerarquías informales, etc. Busca transformar la comprensión de estas dinámicas, salir del victimismo y ofrecer herramientas de regulación interna y externa frente a estos comportamientos.", link: null  },
     { title: "Libros", image: libros2, description: "Description for card 6." },
     // { title: "Libros", image: libros3, description: "Description for card 9." },
-    { title: "Libros", image: libros4, description: "Este libro combina contenido teórico y práctico desde un enfoque interdisciplinar que recoge aportaciones de salud pública, educación, ciencias ambientales, alimentación, actividad física, género, epidemiología y salud mental, entre otros campos. Además, presenta experiencias reales de personas (alumnado, profesorado y personal administrativo) que trabajan desde hace años para hacer de la Universidad de Alcalá una institución saludable y formar profesionales responsables y solidarios." },
+    { title: "Libros", image: libros4, description: "Este libro combina contenido teórico y práctico desde un enfoque interdisciplinar que recoge aportaciones de salud pública, educación, ciencias ambientales, alimentación, actividad física, género, epidemiología y salud mental, entre otros campos. Además, presenta experiencias reales de personas (alumnado, profesorado y personal administrativo) que trabajan desde hace años para hacer de la Universidad de Alcalá una institución saludable y formar profesionales responsables y solidarios.", link: null },
   ],
 ];
 
@@ -84,7 +84,17 @@ export default function App() {
 
                       <div className="bg-white p-4 text-center border-t">
                         <p className=" text-btt font-body">{card.description}</p>
-                        <a href={card.link} target="_blank" rel="noopener noreferrer" className="text-btt font-body">Ver más</a>
+                       {card.link?.trim() && (
+                      <a
+                        href={card.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-btt font-body text-primary underline hover:text-btt"
+                      >
+                        Ver más
+                      </a>
+                    )}
+
                       </div>
                     </motion.div>
                   </SwiperSlide>
