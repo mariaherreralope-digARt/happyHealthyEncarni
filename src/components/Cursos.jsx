@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useModal } from "./ModalContext";
-import GlobalModal from "./GlobalModal"; 
+import GlobalModal from "./GlobalModal";
 
 import intelEmoc from '../assets/intelEmoc.png';
 import pnl from '../assets/pnl.png';
@@ -27,7 +27,7 @@ const Cursos = () => {
       `,
       overlayColor: "rgba(255, 243, 228, 0.7)",
     },
-   
+
     {
       icon: gestion,
       title: "Crecimiento Personal y Transformación",
@@ -42,9 +42,9 @@ const Cursos = () => {
       `,
       overlayColor: "rgba(255, 243, 228, 0.7)",
     },
-     {
+    {
       icon: mindfull,
-      title: "Bienestar Mental y Consciente",
+      title: "Vida Consciente",
       description: `
         <p>Entrena tu mente para vivir con atención, serenidad y presencia. Desarrolla una conciencia más profunda, capaz de responder en lugar de reaccionar.</p>
 
@@ -55,7 +55,7 @@ const Cursos = () => {
             <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
               <li>MBSR (Mindfulness-Based Stress Reduction): reducción del estrés.</li>
               <li>MSC (Mindful Self-Compassion): autocompasión y amabilidad.</li>
-              <li>MCE (Mindfulness para el Crecimiento Emocional): equilibrio y resiliencia.</li>
+              <li>MCE (Mindfulness Compasivo Emocional): equilibrio y resiliencia.</li>
             </ul>
             Programas combinados para desarrollar autocuidado consciente.
           </li>
@@ -63,7 +63,7 @@ const Cursos = () => {
       `,
       overlayColor: "rgba(255, 243, 228, 0.7)",
     },
-   
+
     {
       icon: crecimiento,
       title: "Felicidad y Bienestar Subjetivo",
@@ -81,7 +81,7 @@ const Cursos = () => {
       `,
       overlayColor: "rgba(255, 243, 228, 0.7)",
     },
-     {
+    {
       icon: bienestar,
       title: "Bienestar Holístico",
       description: `

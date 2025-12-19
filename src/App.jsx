@@ -29,7 +29,7 @@ function App() {
           <Coaching />
           <Investigaciones />
           <Testimonials />
-          <Newsletter />
+          {/* <Newsletter /> */}
           <Footer />
           <CookieConsentBanner />
           <GlobalModal />

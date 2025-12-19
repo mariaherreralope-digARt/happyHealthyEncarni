@@ -12,7 +12,7 @@ const footerLinks = {
     { name: 'Quiénes somos', href: '#' },
     { name: 'Nuestra filosofía', href: '#' },
     { name: 'Preguntas frecuentes', href: '#' },
-    { name: 'Blog', href: '#' },
+    { name: 'Blog', href: 'https://wellnessentrenandomenteycorazon.blogspot.com/' },
   ],
   'Conecta': [
     { name: 'Contacto', href: '#' },
@@ -41,7 +41,7 @@ const Footer = () => {
                 alt="Logo Bienestar"
                 className="h-12 rounded-lg relative z-10 hover:scale-[1.02] transition-transform duration-300 object-contain"
               />
-              <span className='text-xl font-heading font-bold text-btt'>@happy_healthy_tmv</span>
+              <span className='text-xl font-heading font-bold text-btt'>Happy Healthy TMV</span>
             </div>
 
             <p className='text-gray-600 mb-6 font-body md:w-3/4'>
@@ -52,9 +52,7 @@ const Footer = () => {
               <a href="https://wellnessentrenandomenteycorazon.blogspot.com/" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-200'>
                 <FaBlog className="size-5" />
               </a>
-              <a href="
-
-https://www.instagram.com/happy_healthy_tmv?igsh=MTVyMXkwb2d6cDI4Zw%3D%3D&utm_source=qr" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-btt hover:text-white transition-all duration-200'>
+              <a href="https://www.instagram.com/happy_healthy_tmv?igsh=MTVyMXkwb2d6cDI4Zw%3D%3D&utm_source=qr" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-btt hover:text-white transition-all duration-200'>
                 <FaInstagram className="size-5" />
               </a>
               <a href="https://www.linkedin.com/in/encarni-cerrillo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className='w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-secondary hover:text-white transition-all duration-200'>
@@ -90,9 +88,7 @@ https://www.instagram.com/happy_healthy_tmv?igsh=MTVyMXkwb2d6cDI4Zw%3D%3D&utm_so
             <p className='text-gray-600 font-body text-sm'>
               © {new Date().getFullYear()} happy&healthy. Todos los derechos reservados.
             </p>
-            <p className='text-gray-600 text-sm'>
-              Web realizada por digARt - María Herrera ✨
-            </p>
+
           </div>
         </div>
       </div>

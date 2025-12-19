@@ -7,14 +7,14 @@ const AboutMe = () => {
       <div className='flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20'>
 
         {/* LEFT column: Text */}
-        <motion.div 
+        <motion.div
           className='md:w-2/5 w-full space-y-4'
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1, staggerChildren: 0.2 }}
         >
-          <motion.h2 
+          <motion.h2
             className="text-2xl text-primary md:text-3xl font-heading mb-0"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ const AboutMe = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <strong>Happy & Healthy</strong> significa vivir feliz y saludable , en armonía para alcanzar <strong>Tu Mejor Versión</strong>.
+            <strong>Happy Healthy TMV</strong> significa vivir feliz y saludable , en armonía para alcanzar <strong>Tu Mejor Versión</strong>.
           </motion.p>
           <motion.p
             className="max-w-3xl mx-auto text-sm md:text-md font-body leading-relaxed text-gray-700 mb-6"
@@ -59,10 +59,10 @@ const AboutMe = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-                Soy tu coach , Doctora  en Educación. Licenciada en ciencias de la Actividad física y deporte.
-                
-   
-</motion.p>
+            Soy tu coach , Doctora  en Educación. Licenciada en ciencias de la Actividad física y deporte.
+
+
+          </motion.p>
           <motion.p
             className="max-w-3xl mx-auto text-sm md:text-md font-body leading-relaxed text-gray-700 mb-6"
             initial={{ opacity: 0, y: -20 }}
@@ -70,9 +70,9 @@ const AboutMe = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-             
-    Especializada en Inteligencia Emocional, Mindfullness, PNL  e implementación de hábitos para la gestión del estrés y la ansiedad. 
-</motion.p>
+
+            Especializada en Inteligencia Emocional, Mindfullness, PNL  e implementación de hábitos para la gestión del estrés y la ansiedad.
+          </motion.p>
           <motion.p
             className="max-w-3xl mx-auto text-sm md:text-md font-body leading-relaxed text-gray-700 mb-6"
             initial={{ opacity: 0, y: -20 }}
@@ -90,7 +90,7 @@ const AboutMe = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-           Mi misión es acompañarte - guiarte desde el autoconocimiento y la   introspección, para descubrir  tu fortaleza interior y crear la vida que te mereces incrementando tu  bienestar físico, emocional , mental y espiritual.
+            Mi misión es acompañarte - guiarte desde el autoconocimiento y la   introspección, para descubrir  tu fortaleza interior y crear la vida que te mereces incrementando tu  bienestar físico, emocional , mental y espiritual.
 
           </motion.p>
 
@@ -124,9 +124,9 @@ const AboutMe = () => {
 
       </div>
       <div className="flex flex-col  items-center justify-between ">
-        <h2 className=" mt-6 text-xl text-primary md:text-2xl font-heading mb-4">Logo y arbolito significado</h2>
+        <h2 className=" mt-6 text-xl text-primary md:text-2xl font-heading mb-4">¿Qué representa nuestro logo? </h2>
         <p className="max-w-3xl mx-auto text-sm md:text-md font-body italic text-center leading-relaxed text-btt">El árbol de la vida representa el crecimiento personal, las raíces , la conexión interior y la expansión. <br />
-El leoncito simboliza valentía y corage,  esa fuerza interna que todos tenemos, incluso cuando no la vemos.</p>
+          El leoncito simboliza valentía y corage, esa fuerza interna que todos tenemos, incluso cuando no la vemos.  <br />Ambas tu t r a n s f o r m a c i ó n.</p>
       </div>
     </section>
   );
