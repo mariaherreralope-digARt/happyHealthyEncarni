@@ -117,7 +117,7 @@ const AboutMe = () => {
         >
           <img
             src={aboutImg}
-            alt="about"
+            alt="Encarni L. Cerrillo - Happy Healthy Coach"
             className='w-full max-w-md mx-auto pl-4 md:pl-0 h-auto object-cover '
           />
         </motion.div>

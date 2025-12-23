@@ -28,7 +28,7 @@ const slides = [
   { image: card6 },
 ];
 
-const ImageSlider = () => {
+const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const swiperRef = useRef(null);
@@ -45,9 +45,9 @@ const ImageSlider = () => {
     <section id="retiros" className="relative mx-6 md:mx-24 py-12">
       {/* Header */}
       <div className="text-center mb-10 text-gray-700 drop-shadow-md">
-        <h1 className="text-2xl text-primary md:text-3xl font-heading">
+        <h2 className="text-2xl text-primary md:text-3xl font-heading">
           TESTIMONIOS
-        </h1>
+        </h2>
         <p className="text-lg text-btt font-body italic">
           A través de retiros, cursos y coaching uno a uno,
           <br />
@@ -144,4 +144,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default Testimonials;

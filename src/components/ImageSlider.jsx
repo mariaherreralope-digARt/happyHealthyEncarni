@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 import card1 from "../assets/card1.png";
 import card2 from "../assets/card2.png";
-import card3 from "../assets/card3.png";  
+import card3 from "../assets/card3.png";
 import card4 from "../assets/card4.png";
 import card5 from "../assets/card5.png";
 import card6 from "../assets/card6.png";
@@ -40,27 +40,27 @@ const slides = [
     title: "HOLISTIC WELLNESS",
     description: " Equilibra tu cuerpo y tu mente a través del movimiento, la respiración consciente y los hábitos potenciadores para tu bienestar con baños de sol y mar.",
   },
-    {
+  {
     image: card5,
     title: "IKIGAI MOMENTS",
     description: "Viaja a Japón y vive una transformación que despertará tu ilusión y pasión por la vida.",
   },
-      {
+  {
     image: card6,
     title: "INSIDE",
     description: "Silencio, introspección, naturaleza y mindfulness para fortalecer tu equilibrio interior.",
   },
-      {
+  {
     image: card7,
     title: "FLOW EXPERIENCE",
     description: "Vive una experiencia enriquecedora y desafiante que te invita a fluir, soltar y reconectar con tu esencia.",
   },
-      {
+  {
     image: card8,
     title: "MINDFUL EXPERIENCE",
     description: "Descubre herramientas prácticas para transformar tu bienestar cultivando momentos de presencia y consciencia a través del mindfulness.",
   },
-{
+  {
     image: card9,
     title: "EXCLUSIVE EXPERIENCE",
     description: "Personaliza tu experiencia y crea un viaje de bienestar a tu medida.",
@@ -87,7 +87,7 @@ const ImageSlider = () => {
     <section id="retiros" className="relative mx-24 py-12">
 
       <div className="text-center mb-10 mt-0 pt-0 text-gray-700 drop-shadow-md">
-        <h1 className="text-2xl text-primary md:text-3xl font-heading mb-0">RETIROS</h1>
+        <h2 className="text-2xl text-primary md:text-3xl font-heading mb-0">RETIROS</h2>
         <p className="text-lg text-btt font-body mb-4 italic">Sumérgete en uno de nuestros retiros, donde cada experiencia está diseñada para inspirar calma, renovación y crecimiento personal.</p>
       </div>
 

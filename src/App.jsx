@@ -5,7 +5,7 @@ import Hero from './components/Hero'
 import AboutMe from './components/AboutMe'
 import Cursos from './components/Cursos'
 import ImageSlider from './components/ImageSlider'
-import Newsletter from './components/Newsletter'
+
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 import CookieConsentBanner from './components/CookieConsentBanner'
@@ -29,7 +29,7 @@ function App() {
           <Coaching />
           <Investigaciones />
           <Testimonials />
-          {/* <Newsletter /> */}
+
           <Footer />
           <CookieConsentBanner />
           <GlobalModal />
