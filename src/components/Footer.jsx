@@ -21,9 +21,9 @@ const footerLinks = {
     { name: 'Eventos', href: '#' },
   ],
   'Legal': [
-    { name: 'Política de privacidad', href: '#' },
+    { name: 'Política de privacidad', href: '/politica-de-privacidad' },
     { name: 'Términos y condiciones', href: '#' },
-    { name: 'Aviso legal', href: '#' },
+    { name: 'Aviso legal', href: '/aviso-legal' },
   ],
 };
 
